@@ -1,0 +1,40 @@
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.panel {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+  margin-bottom: 15px;
+}
+
+.panel-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.panel-header {
+  padding: 15px 13px;
+  margin: 0;
+  background: rgba(248, 248, 248, .9);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.panel-footer {
+  display: block;
+  padding: 7px 14px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  background: rgba(248,248,248,.9);
+}

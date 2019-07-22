@@ -1,0 +1,25 @@
+
+:host {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  width:100%;
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height: 100%;
+  background-color: #efefef;
+  overflow: auto;
+  padding-top: 20px;
+}

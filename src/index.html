@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>NeoGroup Components</title>
+    <script type="module" src="build/neogroup-components.esm.js"></script>
+    <script nomodule src="build/neogroup-components.js"></script>
+  </head>
+  <body>
+
+    <ng-page>
+
+      <ng-toolbar header="Neo Components">
+        <ng-date-time-field empty-text="Fecha desde" value="2019-06-02 00:00:00" inline></ng-date-time-field>
+        <ng-date-time-field empty-text="Fecha hasta" value="2019-06-11 23:59:59" inline></ng-date-time-field>
+        <ng-button label="Buscar" inline></ng-button>
+      </ng-toolbar>
+
+      <ng-page-content>
+        <ng-container>
+          <ng-row>
+            <ng-col sm-size=6 lg-size=3>
+              <ng-panel>Grid System sm=6 lg=3</ng-panel>
+            </ng-col>
+            <ng-col sm-size=6 lg-size=3>
+              <ng-panel>Grid System sm=6 lg=3</ng-panel>
+            </ng-col>
+            <ng-col sm-size=6 lg-size=3>
+              <ng-panel>Grid System sm=6 lg=3</ng-panel>
+            </ng-col>
+            <ng-col sm-size=6 lg-size=3>
+              <ng-panel>Grid System sm=6 lg=3</ng-panel>
+            </ng-col>
+          </ng-row>
+
+          <ng-row>
+            <ng-col sm-size=12>
+              <ng-widget label="Alertas" icon="bell">
+                <ng-alert>Alerta de información</ng-alert>
+                <ng-alert header="Well done !" type="success">Esta es una alerta que tiene un <b>titulo</b> !!</ng-alert>
+                <ng-alert type="warning" closable=true>Alerta de warning</ng-alert>
+                <ng-alert type="danger">Alerta de error</ng-alert>
+              </ng-widget>
+            </ng-col>
+          </ng-row>
+
+          <ng-row>
+            <ng-col sm-size=12>
+              <ng-widget label="Formularios" icon="align-left">
+                <ng-row>
+                  <ng-col sm-size=6>
+                    <ng-text-field value="Luis" label="Nombre"></ng-text-field>
+                  </ng-col>
+                  <ng-col sm-size=6>
+                    <ng-text-field value="Amengual" label="Apellido"></ng-text-field>
+                  </ng-col>
+                </ng-row>
+                <ng-row>
+                  <ng-col sm-size=6>
+                    <ng-text-field value="Campo deshabilitado" label="Campo deshabilitado" disabled=true></ng-text-field>
+                  </ng-col>
+                  <ng-col sm-size=6>
+                    <ng-date-time-field label="Fecha Nac."></ng-date-time-field>
+                  </ng-col>
+                </ng-row>
+              </ng-widget>
+            </ng-col>
+          </ng-row>
+
+          <ng-row>
+            <ng-col>
+              <ng-widget label="DataTables">
+                <ng-data-table id="exampleDataTable"></ng-data-table>
+                <script>
+                  const exampleDataTable = document.querySelector('#exampleDataTable');
+                  exampleDataTable.sorters = [
+                    {
+                      field: 'age',
+                      direction: 'ASC'
+                    }
+                  ];
+                  exampleDataTable.columns = [
+                    {
+                      title: 'Nombre',
+                      dataField: 'name',
+                      width: 250
+                    },
+                    {
+                      title: 'Apellido',
+                      dataField: 'lastName',
+                      width: 250
+                    },
+                    {
+                      title: 'Edad',
+                      dataField: 'age',
+                      align: 'right',
+                      width: 100
+                    },
+                    {
+                      title: 'Documento',
+                      dataField: 'document',
+                      align: 'right'
+                    }
+                  ];
+                  exampleDataTable.data = [
+                    {
+                      name: 'Luis',
+                      lastName: 'Amengual',
+                      age: 37,
+                      document: 29385108
+                    },
+                    {
+                      name: 'Jessica',
+                      lastName: 'Alba',
+                      age: 33
+                    },
+                    {
+                      name: 'Scarlett',
+                      lastName: 'Johansson',
+                      age: 38
+                    },
+                    {
+                      name: 'Mila',
+                      lastName: 'Kunis',
+                      age: 28,
+                      document: 29427575
+                    },
+                    {
+                      name: 'Megan',
+                      lastName: 'Fox',
+                      age: 31
+                    }
+                  ];
+                </script>
+              </ng-widget>
+            </ng-col>
+          </ng-row>
+
+          <ng-row>
+            <ng-col>
+              <ng-widget label="Tabs">
+                <ng-tab-panel id="superTabPanel">
+                  <ng-tab label="tab1" active>
+                    Hola, estamos en el tab1
+                  </ng-tab>
+                  <ng-tab label="tab2" closable>
+                    Buenas tardes, estamos en el tab2
+                  </ng-tab>
+                  <ng-tab label="tabInter" padding="false">
+                    Copado, este es un tab intermedio
+                  </ng-tab>
+                </ng-tab-panel>
+              </ng-widget>
+            </ng-col>
+          </ng-row>
+
+      </ng-page-content>
+    </ng-page>
+  </body>
+</html>

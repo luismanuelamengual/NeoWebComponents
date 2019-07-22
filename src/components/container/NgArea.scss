@@ -1,0 +1,45 @@
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+:host([region='north']) {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+:host([region='south']) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+:host([region='west']) {
+  left: 0;
+}
+
+:host([region='east']) {
+  right: 0;
+}
+
+.content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}

@@ -1,0 +1,18 @@
+
+.menu {
+  position: fixed;
+  background: #fff !important;
+  border: 1px solid #c7c7c7;
+  -moz-box-shadow: inset 0 -4px 0 0 #bd2a2a;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  width: 200px;
+  padding: 3px;
+  z-index: 9000;
+}
+
+.separator {
+  margin: 3px 0px;
+  border: 0;
+  border-top: 1px solid #eee;
+}

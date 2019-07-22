@@ -1,0 +1,51 @@
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.menuItem {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.menuItem.hasMenu::after {
+  content: '▸';
+  line-height: 28px;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+}
+
+.menuItem:hover {
+  background: #ddd;
+}
+
+.menuItemCaption {
+  padding-left: 7px;
+  padding-right: 7px;
+  line-height: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.menuItem.hasCheckbox .menuItemCaption {
+  padding-left: 22px;
+}
+
+.menuItemCheckbox {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  height: 28px;
+  line-height: 28px;
+  vertical-align: center;
+  cursor: pointer;
+}

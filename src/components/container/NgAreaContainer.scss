@@ -1,0 +1,70 @@
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .resizer {
+    display: none;
+  }
+
+  .resizer-north, .resizer-south, .resizer-west, .resizer-east {
+    top: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    bottom: auto !important;
+  }
+}
+
+@media (min-width: 768px) {
+
+  :host {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .resizer {
+    position: absolute;
+    background: #dfdfdf;
+    overflow: hidden;
+  }
+
+  .resizer-north, .resizer-south {
+    left: 0;
+    right: 0;
+  }
+
+  .resizer-west:not(.resizer-collapsed), .resizer-east:not(.resizer-collapsed) {
+    cursor: col-resize;
+  }
+
+  .resizer-north:not(.resizer-collapsed), .resizer-south:not(.resizer-collapsed) {
+    cursor: row-resize;
+  }
+
+  .collapse-toggle-button {
+    cursor: pointer;
+    background: silver;
+  }
+
+  .resizer-west > .collapse-toggle-button, .resizer-east > .collapse-toggle-button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+  }
+
+  .resizer-north > .collapse-toggle-button, .resizer-south > .collapse-toggle-button {
+    width: 40px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}

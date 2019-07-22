@@ -1,0 +1,29 @@
+
+button.primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+button.primary:hover, button.primary:active {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+button.primary:hover:active {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+
+button.primary:focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+
+button.primary[disabled]:hover {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}

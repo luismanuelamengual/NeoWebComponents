@@ -1,0 +1,29 @@
+
+button.default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+button.default:hover, button.default:active {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+button.default:hover:active {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+
+button.default:focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+
+button.default[disabled]:hover {
+  background-color: #fff;
+  border-color: #ccc;
+}

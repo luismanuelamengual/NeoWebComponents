@@ -1,0 +1,46 @@
+
+:host {
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  display: block;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+label {
+  font-family: "Open Sans",Arial,Helvetica,Sans-Serif;
+  font-size: 14px;
+  display: inline-block;
+  float: left;
+  max-width: 100%;
+  margin-bottom: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:host([inline]) {
+  display: inline-block;
+  float: left;
+  padding: 9px 0;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+:host([inline]) label {
+  display: inline-block;
+  float: left;
+  padding: 9px 0;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  :host([inline]) {
+    display: block;
+    float: none;
+    padding: 8px 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+
+button.danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+button.danger:hover, button.danger:active {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+button.danger:hover:active {
+  color: #fff;
+  background-color: #ac2925;
+  border-color: #761c19;
+}
+
+button.danger:focus {
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #761c19;
+}
+
+button.danger[disabled]:hover {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
